@@ -10,7 +10,8 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  }, "emulators": {
+  }, 
+  "emulators": {
     "hosting": {
       "host": "localhost",
       "port": "5555"
