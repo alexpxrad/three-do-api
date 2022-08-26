@@ -8,8 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-app.get('/tasks', getTask)
-app.post('/tasks', postTask)
+app.get('/tasks', getTasks)
+app.post('/tasks', createTask)
 app.patch('/tasks/:taskId', updateTask)
 app.delete('/tasks/:taskId', deleteTask)
 
