@@ -1,6 +1,4 @@
-import jwt from "jsonwebtoken";
-import dbConnect from "./dbConnect.js";
-import { secretKey } from "../credentials.js";
+
 
 import jwt from 'jsonwebtoken';
 import dbConnect from "./dbConnect.js";

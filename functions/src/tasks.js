@@ -11,7 +11,7 @@ export async function getTasks(req, res) {
   const token = req.headers.authorization;
   const user = jwt.verify(token, secretKey);
   const db = dbConnect();
-  const collection = await db.collection('task')
+  const collection = await db.collection('tasks')
   .where('userId', '==', user.id)
   .get()
     .catch(err => res.status(500).send(err));
@@ -35,7 +35,7 @@ export async function createTask(req, res) { // later we will add userId and tim
   }
   newTask.userId = user.id
   const db = dbConnect();
-  await db.collection('task').add(newTask)
+  await db.collection('tasks').add(newTask)
     .catch(err => res.status(500).send(err));
   res.status(201);
   getTasks(req, res); // send back the full list of tasks...
